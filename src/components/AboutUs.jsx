@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Typography, Grid, Button } from '@mui/material';
+import AboutLogo from '../assets/about.png'
 
 const AboutUs = () => {
     return (
@@ -9,13 +10,13 @@ const AboutUs = () => {
                     <Box
                         component="img"
                         sx={{
-                            borderRadius: '50%',
+                            // borderRadius: '50%',
                             width: '100%',
-                            maxWidth: 300,
+                            // maxWidth: 300,
                             height: 'auto',
                         }}
                         alt="Global Dock"
-                        src="https://example.com/your-image-url.jpg" // Replace with your company's image URL
+                        src={AboutLogo} // Replace with your company's image URL
                     />
                 </Grid>
                 <Grid item xs={12} md={6} sx={{ p: 3 }}>
