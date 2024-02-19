@@ -17,10 +17,10 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v1
         with:
-          node-version: '20.11.0'
+          node-version: '20'
 
       - name: Cache dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -36,7 +36,9 @@ jobs:
       - name: Deploy to FTP Server
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-            server: ftp.globaldock.in:21
+            git-ftp-args: --insecure
+            server: ftp.globaldock.in
+            port: 21
             username: u651250704.git
-            password: Vikshith@123
+            password: ${{ secrets.PASSWORD}}
             server-dir: /home/u651250704/domains/globaldock.in/public_html/staging/
