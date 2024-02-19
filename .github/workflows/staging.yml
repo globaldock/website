@@ -36,7 +36,7 @@ jobs:
       - name: Deploy to FTP Server
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-            server: ftp.globaldock.in/
+            server: ftp.globaldock.in:21
             username: u651250704.git
             password: Vikshith@123
             server-dir: /home/u651250704/domains/globaldock.in/public_html/staging/
