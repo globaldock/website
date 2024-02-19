@@ -41,4 +41,4 @@ jobs:
             port: 21
             username: u651250704.git
             password: ${{ secrets.PASSWORD}}
-            server-dir: /home/u651250704/domains/globaldock.in/public_html/staging/
+            server-dir: ${{ secrets.STAGING_DIR}}
