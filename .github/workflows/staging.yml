@@ -40,4 +40,4 @@ jobs:
             username: ${{ secrets.username }}
             password: ${{ secrets.password }}
             local-dir: out/
-            server-dir: ${{sccrets.staging_dir}}
+            server-dir: ${{secrets.staging_dir}}
