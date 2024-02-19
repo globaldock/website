@@ -39,6 +39,7 @@ jobs:
             git-ftp-args: --insecure
             server: ftp.globaldock.in
             port: 21
-            username: u651250704.git
+            username: ${{ secrets.USERNAME}}
             password: ${{ secrets.PASSWORD}}
+            local-dir: ./dist/
             server-dir: ${{ secrets.STAGING_DIR}}
