@@ -39,5 +39,4 @@ jobs:
             server: ${{secrets.ftp_server}}
             username: ${{ secrets.username }}
             password: ${{ secrets.password }}
-            local-dir: out/
             server-dir: ${{secrets.staging_dir}}
