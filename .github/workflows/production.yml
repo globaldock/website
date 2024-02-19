@@ -33,10 +33,10 @@ jobs:
       - name: Deploy to FTP Server
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-            git-ftp-args: --insecure
-            server: ftp.globaldock.in
-            port: 21
+            git-ftp-args: ${{ secrets.FTP_ARGS}}
+            server: ${{ secrets.FTP_SERVER}}
+            port: ${{ secrets.PORT}}
             username: ${{ secrets.USERNAME}}
             password: ${{ secrets.PASSWORD}}
-            local-dir: ./dist/
+            local-dir: ${{ secrets.LOCAL}}
             server-dir: ${{ secrets.PROD_DIR}}
