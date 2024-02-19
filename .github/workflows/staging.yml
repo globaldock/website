@@ -1,6 +1,6 @@
 name: Build and Deploy
 on: 
-  [push, merge]:
+  [push, pull_request]:
     branches: 
       - main
 
